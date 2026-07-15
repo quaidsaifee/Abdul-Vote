@@ -15,16 +15,16 @@
 
 <style>
   :root{
-    --ink:#0E2A33;        /* near-black lake ink (main text)         */
-    --lake:#0C4A5A;       /* deep Great Lakes teal (hero)            */
-    --lake-2:#0a3a47;     /* darker lake for gradient                */
-    --wave:#1B93A8;       /* bright lake teal (accents, links)       */
-    --sun:#F2A93B;        /* warm sunrise gold (primary accent)      */
-    --sun-deep:#E0912A;   /* gold on hover                           */
-    --paper:#EDF2F2;      /* pale lake-mist page background          */
+    --ink:#13233F;        /* navy ink (main text)                    */
+    --lake:#152B4E;       /* deep navy (hero, headings)              */
+    --lake-2:#0E1E3A;     /* darker navy for gradient                */
+    --wave:#2E5AA8;       /* medium blue (accents, links)            */
+    --sun:#DC2A3A;        /* campaign red (primary accent)           */
+    --sun-deep:#B71F2E;   /* red on hover                            */
+    --paper:#F3F5FA;      /* very light blue-white page background    */
     --surface:#FFFFFF;    /* white cards                             */
-    --line:#D6E1E1;       /* hairline dividers                       */
-    --muted:#4C6169;      /* muted text                              */
+    --line:#DCE3EF;       /* hairline dividers                       */
+    --muted:#4A5A72;      /* muted navy-gray text                    */
     --maxw:1080px;
   }
 
@@ -60,18 +60,18 @@
   /* ── HERO ───────────────────────────────────────────────── */
   .hero{
     position:relative;overflow:hidden;color:#EAF4F5;
-    background:radial-gradient(120% 130% at 88% -10%, #16637a 0%, var(--lake) 42%, var(--lake-2) 100%);
+    background:radial-gradient(120% 130% at 88% -10%, #23406f 0%, var(--lake) 42%, var(--lake-2) 100%);
   }
   .sun-disc{position:absolute;top:-90px;right:-40px;width:280px;height:280px;border-radius:50%;
-            background:radial-gradient(circle at 40% 40%, #F7C468 0%, var(--sun) 55%, rgba(242,169,59,0) 72%);
+            background:radial-gradient(circle at 40% 40%, rgba(255,255,255,.5) 0%, rgba(120,150,220,.28) 55%, rgba(120,150,220,0) 72%);
             opacity:.55;pointer-events:none;}
   .hero .wrap{position:relative;z-index:2;padding-top:clamp(3rem,7vw,5.5rem);padding-bottom:clamp(5rem,9vw,7.5rem);}
-  .hero .eyebrow{color:var(--sun);}
+  .hero .eyebrow{color:#FF6473;}
   .hero h1{
     font-size:clamp(2.5rem,3.2vw + 2rem,5rem);font-weight:800;
     margin:1.1rem 0 0;max-width:16ch;color:#FFFFFF;
   }
-  .hero .lede{font-size:clamp(1.12rem,0.9rem + 0.7vw,1.5rem);color:#CFE6E9;
+  .hero .lede{font-size:clamp(1.12rem,0.9rem + 0.7vw,1.5rem);color:#CBD8EE;
               margin:1.2rem 0 0;max-width:46ch;font-weight:400;}
   .hero .primary-date{margin-top:1.6rem;font-weight:700;color:#EAF4F5;
     display:inline-block;border:1px solid rgba(234,244,245,.35);border-radius:999px;padding:.5rem 1.05rem;font-size:.95rem;}
@@ -81,7 +81,7 @@
     padding:.85rem 1.5rem;font-size:1rem;transition:transform .12s ease,background .12s ease;
   }
   .btn:hover{transform:translateY(-2px);}
-  .btn-primary{background:var(--sun);color:var(--ink);}
+  .btn-primary{background:var(--sun);color:#fff;}
   .btn-primary:hover{background:var(--sun-deep);}
   .btn-ghost{background:transparent;color:#EAF4F5;border:1.5px solid rgba(234,244,245,.5);}
   .btn-ghost:hover{background:rgba(255,255,255,.08);}
@@ -134,8 +134,8 @@
   .vote-panel h2{max-width:22ch;}
   .vote-flag{color:var(--sun);}
   .vote-cta{
-    background:var(--sun);color:var(--ink);font-size:1.12rem;font-weight:800;
-    padding:1rem 1.8rem;margin-top:1.4rem;box-shadow:0 10px 24px -12px rgba(242,169,59,.9);
+    background:var(--sun);color:#fff;font-size:1.12rem;font-weight:800;
+    padding:1rem 1.8rem;margin-top:1.4rem;box-shadow:0 10px 24px -12px rgba(220,42,58,.8);
   }
   .vote-cta:hover{background:var(--sun-deep);}
   .vote-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.8rem 0 .4rem;}
@@ -150,7 +150,7 @@
   footer{background:var(--ink);color:#B9CDD1;padding:2.6rem 0;font-size:.92rem;}
   footer strong{color:#EAF4F5;}
   footer .disc{margin-top:1rem;font-size:.82rem;color:#7E969C;max-width:60ch;}
-  footer a{color:var(--sun);}
+  footer a{color:#FF6473;}
 
   :focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:4px;}
 </style>
@@ -187,8 +187,8 @@
 
   <!-- decorative shoreline waves (no need to edit) -->
   <svg class="waves" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 40 C 240 10, 480 70, 720 44 C 960 18, 1200 66, 1440 38 L1440 70 L0 70 Z" fill="#178198" opacity=".55"/>
-    <path d="M0 50 C 240 24, 480 74, 720 52 C 960 30, 1200 72, 1440 50 L1440 70 L0 70 Z" fill="#EDF2F2"/>
+    <path d="M0 40 C 240 10, 480 70, 720 44 C 960 18, 1200 66, 1440 38 L1440 70 L0 70 Z" fill="#2E5AA8" opacity=".5"/>
+    <path d="M0 50 C 240 24, 480 74, 720 52 C 960 30, 1200 72, 1440 50 L1440 70 L0 70 Z" fill="#F3F5FA"/>
   </svg>
 </header>
 
@@ -238,7 +238,7 @@
         <!-- EDIT: paragraphs about the candidate. Add or remove <p>...</p> blocks freely. -->
         <p>Abdul El-Sayed is a Michigan-born physician and epidemiologist. He rebuilt Detroit's Health Department after the city's bankruptcy, then led Wayne County's health and human services for 1.8 million residents.</p>
         <p>In office, he secured free glasses for kids, removed lead from Detroit schools, expanded access to life-saving Narcan, and launched a program to cancel up to $700 million in medical debt for 300,000 Michiganders.</p>
-        <p>Now he's running for U.S. Senate on a campaign funded by people, not corporate PACs, AIPAC or its allies.</p>
+        <p>Now he's running for U.S. Senate on a campaign funded by people, not corporate PACs.</p>
       </div>
       <!-- EDIT: photo. Upload your photo file to the repo and put its name below.
            Right now it points to a file named  abdul.jpg  -->
@@ -276,7 +276,11 @@
           <h3>Medicare for All</h3>
           <p>Guaranteed, high-quality health care for every American.</p>
         </div>
-        
+        <div class="card">
+          <span class="num">04</span>
+          <h3>Clean air &amp; water</h3>
+          <p>Protect the Great Lakes and hold polluters accountable.</p>
+        </div>
       </div>
     </div>
   </section>
