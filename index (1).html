@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     EDIT: PAGE TITLE (shows in browser tab and when shared/linked)
+     ═══════════════════════════════════════════════════════════════════ -->
+<title>Abdul El-Sayed for U.S. Senate — Get Involved</title>
+<meta name="description" content="Learn about Abdul El-Sayed's campaign for U.S. Senate in Michigan, and how you can help before the August 4 primary.">
+
+<!--  ┌──────────────────────────────────────────────────────────────────┐
+      │  HOW TO UPDATE THIS PAGE                                          │
+      │  1. Open this file in any text editor (or VS Code).              │
+      │  2. Find the blocks marked  <!-- EDIT: ... -->  and change the    │
+      │     words between the tags. That's it.                           │
+      │  3. IMAGES: replace the src="..." link with your own image URL,  │
+      │     or drop an image file next to this page and use its filename │
+      │     e.g. src="abdul.jpg".                                        │
+      │  4. LINKS: change the href="..." to the web address you want.    │
+      │  5. To add another item in a list, copy one block (from one      │
+      │     <!-- card start --> to <!-- card end -->) and paste it below.│
+      │  6. Save the file. If it's hosted online, re-upload it.          │
+      └──────────────────────────────────────────────────────────────────┘ -->
+
+<style>
+  :root{
+    --ink:#0E2A33;        /* near-black lake ink (main text)         */
+    --lake:#0C4A5A;       /* deep Great Lakes teal (hero)            */
+    --lake-2:#0a3a47;     /* darker lake for gradient                */
+    --wave:#1B93A8;       /* bright lake teal (accents, links)       */
+    --sun:#F2A93B;        /* warm sunrise gold (primary accent)      */
+    --sun-deep:#E0912A;   /* gold on hover                           */
+    --paper:#EDF2F2;      /* pale lake-mist page background          */
+    --surface:#FFFFFF;    /* white cards                             */
+    --line:#D6E1E1;       /* hairline dividers                       */
+    --muted:#4C6169;      /* muted text                              */
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
+
+  body{
+    margin:0;
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    font-size:clamp(1rem,0.95rem + 0.2vw,1.12rem);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Archivo",sans-serif;line-height:1.04;letter-spacing:-0.02em;margin:0;}
+  a{color:var(--wave);}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--sun);color:var(--ink);
+        padding:.6rem 1rem;font-weight:700;z-index:100;border-radius:0 0 8px 0;}
+  .skip:focus{left:0;}
+
+  .eyebrow{
+    font-weight:800;text-transform:uppercase;letter-spacing:.2em;
+    font-size:.78rem;display:inline-flex;align-items:center;gap:.55rem;
+  }
+  .eyebrow svg{width:1.05em;height:1.05em;flex:none;}
+
+  /* ── HERO ───────────────────────────────────────────────── */
+  .hero{
+    position:relative;overflow:hidden;color:#EAF4F5;
+    background:radial-gradient(120% 130% at 88% -10%, #16637a 0%, var(--lake) 42%, var(--lake-2) 100%);
+  }
+  .sun-disc{position:absolute;top:-90px;right:-40px;width:280px;height:280px;border-radius:50%;
+            background:radial-gradient(circle at 40% 40%, #F7C468 0%, var(--sun) 55%, rgba(242,169,59,0) 72%);
+            opacity:.55;pointer-events:none;}
+  .hero .wrap{position:relative;z-index:2;padding-top:clamp(3rem,7vw,5.5rem);padding-bottom:clamp(5rem,9vw,7.5rem);}
+  .hero .eyebrow{color:var(--sun);}
+  .hero h1{
+    font-size:clamp(2.5rem,3.2vw + 2rem,5rem);font-weight:800;
+    margin:1.1rem 0 0;max-width:16ch;color:#FFFFFF;
+  }
+  .hero .lede{font-size:clamp(1.12rem,0.9rem + 0.7vw,1.5rem);color:#CFE6E9;
+              margin:1.2rem 0 0;max-width:46ch;font-weight:400;}
+  .hero .primary-date{margin-top:1.6rem;font-weight:700;color:#EAF4F5;
+    display:inline-block;border:1px solid rgba(234,244,245,.35);border-radius:999px;padding:.5rem 1.05rem;font-size:.95rem;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem;}
+  .btn{
+    display:inline-block;font-weight:700;text-decoration:none;border-radius:10px;
+    padding:.85rem 1.5rem;font-size:1rem;transition:transform .12s ease,background .12s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--sun);color:var(--ink);}
+  .btn-primary:hover{background:var(--sun-deep);}
+  .btn-ghost{background:transparent;color:#EAF4F5;border:1.5px solid rgba(234,244,245,.5);}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);}
+
+  /* layered shoreline waves at base of hero */
+  .waves{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;z-index:1;display:block;}
+
+  /* ── SECTIONS ───────────────────────────────────────────── */
+  section{padding:clamp(3.2rem,6vw,5rem) 0;}
+  .section-label{color:var(--wave);margin-bottom:.9rem;}
+  h2{font-size:clamp(1.8rem,1.2rem + 2vw,2.9rem);font-weight:800;max-width:20ch;}
+  .lead{font-size:1.15rem;color:var(--muted);max-width:60ch;margin-top:1rem;}
+
+  .about{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;}
+  .about-text p{margin:0 0 1rem;}
+  .about-photo{border-radius:14px;overflow:hidden;box-shadow:0 14px 40px -18px rgba(14,42,51,.5);
+               aspect-ratio:4/5;background:var(--line);}
+  .about-photo img{width:100%;height:100%;object-fit:cover;}
+  @media(max-width:760px){.about{grid-template-columns:1fr;}.about-photo{max-width:340px;}}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-top:2rem;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+        padding:1.5rem 1.4rem;box-shadow:0 8px 26px -22px rgba(14,42,51,.55);}
+  .card h3{font-size:1.22rem;font-weight:700;margin-bottom:.5rem;}
+  .card p{margin:0;color:var(--muted);font-size:1rem;}
+  .card .num{font-family:"Archivo";font-weight:800;color:var(--sun);font-size:1.5rem;display:block;margin-bottom:.5rem;}
+
+  .involve{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .act-card{display:flex;flex-direction:column;gap:.65rem;}
+  .act-card a.btn{align-self:flex-start;margin-top:.4rem;background:var(--wave);color:#fff;padding:.6rem 1.15rem;font-size:.95rem;}
+  .act-card a.btn:hover{background:var(--lake);}
+
+  .links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem;}
+  .links a{
+    text-decoration:none;font-weight:700;color:var(--lake);background:var(--paper);
+    border:1px solid var(--line);border-radius:999px;padding:.65rem 1.25rem;font-size:.95rem;
+    transition:background .12s,color .12s;
+  }
+  .links a:hover{background:var(--lake);color:#fff;border-color:var(--lake);}
+
+  /* ── VOTING SECTION (the priority block) ────────────────── */
+  .vote{padding-top:clamp(2.6rem,5vw,3.8rem);padding-bottom:clamp(2.6rem,5vw,3.8rem);}
+  .vote-panel{
+    background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--sun);
+    border-radius:18px;padding:clamp(1.6rem,4vw,2.8rem);
+    box-shadow:0 22px 55px -32px rgba(14,42,51,.6);
+  }
+  .vote-panel h2{max-width:22ch;}
+  .vote-flag{color:var(--sun);}
+  .vote-cta{
+    background:var(--sun);color:var(--ink);font-size:1.12rem;font-weight:800;
+    padding:1rem 1.8rem;margin-top:1.4rem;box-shadow:0 10px 24px -12px rgba(242,169,59,.9);
+  }
+  .vote-cta:hover{background:var(--sun-deep);}
+  .vote-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.8rem 0 .4rem;}
+  @media(max-width:620px){.vote-grid{grid-template-columns:1fr;}}
+  .vote-grid .card{background:var(--paper);}
+  .vk{display:inline-block;font-weight:800;text-transform:uppercase;letter-spacing:.14em;
+      font-size:.72rem;color:var(--wave);margin-bottom:.5rem;}
+  .vote-grid h3{font-size:1.42rem;font-weight:800;margin-bottom:.35rem;}
+  .tiny{font-size:.9rem;color:var(--muted);margin-top:.85rem;max-width:66ch;}
+
+  /* ── FOOTER ─────────────────────────────────────────────── */
+  footer{background:var(--ink);color:#B9CDD1;padding:2.6rem 0;font-size:.92rem;}
+  footer strong{color:#EAF4F5;}
+  footer .disc{margin-top:1rem;font-size:.82rem;color:#7E969C;max-width:60ch;}
+  footer a{color:var(--sun);}
+
+  :focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:4px;}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<header class="hero">
+  <div class="sun-disc" aria-hidden="true"></div>
+  <div class="wrap">
+    <!-- EDIT: small label above the headline -->
+    <span class="eyebrow">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      Michigan &middot; U.S. Senate 2026
+    </span>
+
+    <!-- EDIT: main headline -->
+    <h1>Make Washington work for Michigan.</h1>
+
+    <!-- EDIT: one-line message under the headline -->
+    <p class="lede">Get money out of politics. Put money back in your pocket. Pass Medicare for All. That's what Abdul El-Sayed is running for.</p>
+
+    <!-- EDIT: the two buttons — change the words and the links (href) -->
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#vote">How to vote &rarr;</a>
+      <a class="btn btn-ghost" href="https://abdulforsenate.com/volunteer/">Volunteer</a>
+      <a class="btn btn-ghost" href="https://abdulforsenate.com/donate/">Chip in</a>
+    </div>
+
+    <!-- EDIT: election reminder (or delete this line) -->
+    <div class="primary-date">🗳 Democratic Primary — Tuesday, August 4, 2026</div>
+  </div>
+
+  <!-- decorative shoreline waves (no need to edit) -->
+  <svg class="waves" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 40 C 240 10, 480 70, 720 44 C 960 18, 1200 66, 1440 38 L1440 70 L0 70 Z" fill="#178198" opacity=".55"/>
+    <path d="M0 50 C 240 24, 480 74, 720 52 C 960 30, 1200 72, 1440 50 L1440 70 L0 70 Z" fill="#EDF2F2"/>
+  </svg>
+</header>
+
+<main id="main">
+
+  <!-- ══════════════ HOW TO VOTE  (priority section) ══════════════ -->
+  <section id="vote" class="vote">
+    <div class="wrap">
+      <div class="vote-panel">
+        <span class="eyebrow section-label vote-flag">★ The most important thing</span>
+        <!-- EDIT: heading -->
+        <h2>How to vote &mdash; before or on August&nbsp;4</h2>
+        <!-- EDIT: intro line -->
+        <p class="lead">Every registered Michigander can vote in this primary &mdash; early and in person, or on Election Day. Here's how to find exactly where you go.</p>
+
+        <!-- EDIT: this button link is Michigan's official lookup tool. -->
+        <a class="btn vote-cta" href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section">Find your voting location &rarr;</a>
+        <p class="tiny">This opens the official <strong>Michigan Voter Information Center</strong>. Enter your address to see your early voting site, your Election Day polling place, their hours, and a preview of your ballot.</p>
+
+        <div class="vote-grid">
+          <!-- EDIT: early voting card -->
+          <div class="card">
+            <span class="vk">Early in-person voting</span>
+            <h3>July&nbsp;25 &ndash; August&nbsp;2</h3>
+            <p>At least nine days of early voting, statewide. Some communities offer more &mdash; your specific site and hours are in the lookup above.</p>
+          </div>
+          <!-- EDIT: election day card -->
+          <div class="card">
+            <span class="vk">Election Day</span>
+            <h3>Tuesday, August&nbsp;4</h3>
+            <p>Polls are open 7:00&nbsp;a.m. to 8:00&nbsp;p.m. Vote at your assigned precinct &mdash; find it with the same lookup.</p>
+          </div>
+        </div>
+        <p class="tiny">Michigan doesn't register voters by party, so at the polls you'll pick either the Democratic or Republican side of the ballot &mdash; but only one.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════ ABOUT ══════════════════════ -->
+  <section>
+    <div class="wrap about">
+      <div class="about-text">
+        <span class="eyebrow section-label">Who is Abdul?</span>
+        <!-- EDIT: heading -->
+        <h2>A doctor who fixed broken government — twice.</h2>
+        <!-- EDIT: paragraphs about the candidate. Add or remove <p>...</p> blocks freely. -->
+        <p>Abdul El-Sayed is a Michigan-born physician and epidemiologist. He rebuilt Detroit's Health Department after the city's bankruptcy, then led Wayne County's health and human services for 1.8 million residents.</p>
+        <p>In office, he secured free glasses for kids, removed lead from Detroit schools, expanded access to life-saving Narcan, and launched a program to cancel up to $700 million in medical debt for 300,000 Michiganders.</p>
+        <p>Now he's running for U.S. Senate on a campaign funded by people, not corporate PACs.</p>
+      </div>
+      <!-- EDIT: photo — replace the src link with your own image URL or a local filename -->
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80" alt="Portrait placeholder — replace with a campaign photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PRIORITIES ══════════════════════ -->
+  <section style="background:var(--paper);">
+    <div class="wrap">
+      <span class="eyebrow section-label">The priorities</span>
+      <h2>What Abdul is fighting for</h2>
+      <div class="grid">
+        <!-- card start (copy this whole block to add another priority) -->
+        <div class="card">
+          <span class="num">01</span>
+          <h3>Money out of politics</h3>
+          <p>No corporate PAC money. A campaign accountable to people, not billionaires.</p>
+        </div>
+        <!-- card end -->
+        <div class="card">
+          <span class="num">02</span>
+          <h3>Money in your pocket</h3>
+          <p>Lower the cost of living — housing, groceries, and care that families can actually afford.</p>
+        </div>
+        <div class="card">
+          <span class="num">03</span>
+          <h3>Medicare for All</h3>
+          <p>Guaranteed, high-quality health care for every American.</p>
+        </div>
+        <div class="card">
+          <span class="num">04</span>
+          <h3>Clean air &amp; water</h3>
+          <p>Protect the Great Lakes and hold polluters accountable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ GET INVOLVED ══════════════════════ -->
+  <section class="involve">
+    <div class="wrap">
+      <span class="eyebrow section-label">Get involved</span>
+      <h2>Three weeks. Every hand matters.</h2>
+      <p class="lead">The primary is August 4. Here's how you can help right now.</p>
+      <div class="grid">
+        <!-- card start (copy to add another action) -->
+        <div class="card act-card">
+          <h3>Volunteer</h3>
+          <p>Knock doors, make calls, or help at events near you.</p>
+          <a class="btn" href="https://abdulforsenate.com/volunteer/">Sign up</a>
+        </div>
+        <!-- card end -->
+        <div class="card act-card">
+          <h3>Chip in</h3>
+          <p>Grassroots donations keep this campaign people-powered.</p>
+          <a class="btn" href="https://abdulforsenate.com/donate/">Donate</a>
+        </div>
+        <div class="card act-card">
+          <h3>Check your registration</h3>
+          <p>Make sure you're ready to vote by August 4.</p>
+          <a class="btn" href="https://mvic.sos.state.mi.us/">Verify now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ LINKS ══════════════════════ -->
+  <section>
+    <div class="wrap">
+      <span class="eyebrow section-label">Learn more</span>
+      <h2>Official campaign links</h2>
+      <!-- EDIT: link buttons — change the text and the href. Copy a line to add more. -->
+      <div class="links">
+        <a href="https://abdulforsenate.com/">Campaign website</a>
+        <a href="https://abdulforsenate.com/about/">About Abdul</a>
+        <a href="https://abdulforsenate.com/priorities/">Priorities</a>
+        <a href="https://abdulforsenate.com/donate/">Donate</a>
+        <a href="https://abdulforsenate.com/volunteer/">Volunteer</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer>
+  <div class="wrap">
+    <!-- EDIT: who maintains this page -->
+    <p><strong>This page is maintained by a volunteer supporter.</strong><br>
+       Questions? <a href="mailto:you@example.com">you@example.com</a></p>
+
+    <!-- EDIT: disclaimer — see the note your assistant gave you about which
+         version to use (independent vs. campaign-authorized). -->
+    <p class="disc">Not paid for or authorized by any candidate or candidate's committee. Prepared and paid for by an individual volunteer.</p>
+  </div>
+</footer>
+
+<!-- Fonts: loaded last so text shows instantly even on slow connections -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</body>
+</html>
