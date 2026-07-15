@@ -10,6 +10,9 @@
 <title>Abdul El-Sayed for U.S. Senate — Get Involved</title>
 <meta name="description" content="Learn about Abdul El-Sayed's campaign for U.S. Senate in Michigan, and how you can help before the August 4 primary.">
 
+<!-- To update: edit the text next to any marker that says EDIT.
+     Change images by swapping the src address, and links by swapping the href address. -->
+
 <style>
   :root{
     --ink:#0E2A33;        /* near-black lake ink (main text)         */
@@ -94,10 +97,13 @@
 
   .about{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;}
   .about-text p{margin:0 0 1rem;}
-  .about-photo{border-radius:14px;overflow:hidden;box-shadow:0 14px 40px -18px rgba(14,42,51,.5);
-               aspect-ratio:4/5;background:var(--line);}
-  .about-photo img{width:100%;height:100%;object-fit:cover;}
-  @media(max-width:760px){.about{grid-template-columns:1fr;}.about-photo{max-width:340px;}}
+  .about-photo{margin:0;}
+  .photo-frame{border-radius:14px;overflow:hidden;box-shadow:0 14px 40px -18px rgba(14,42,51,.5);
+               aspect-ratio:4/3;background:var(--line);}
+  .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .credit{font-size:.78rem;color:var(--muted);margin-top:.5rem;text-align:right;}
+  .credit a{color:inherit;}
+  @media(max-width:760px){.about{grid-template-columns:1fr;}.about-photo{max-width:440px;}}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-top:2rem;}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
@@ -233,12 +239,18 @@
         <!-- EDIT: paragraphs about the candidate. Add or remove <p>...</p> blocks freely. -->
         <p>Abdul El-Sayed is a Michigan-born physician and epidemiologist. He rebuilt Detroit's Health Department after the city's bankruptcy, then led Wayne County's health and human services for 1.8 million residents.</p>
         <p>In office, he secured free glasses for kids, removed lead from Detroit schools, expanded access to life-saving Narcan, and launched a program to cancel up to $700 million in medical debt for 300,000 Michiganders.</p>
-        <p>Now he's running for U.S. Senate on a campaign funded by people, not corporate PACs or AIPAC and its allies.</p>
+        <p>Now he's running for U.S. Senate on a campaign funded by people, not corporate PACs.</p>
       </div>
-      <!-- EDIT: photo — replace the src link with your own image URL or a local filename -->
-      <div class="about-photo">
-        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80" alt="Portrait placeholder — replace with a campaign photo">
-      </div>
+      <!-- EDIT: photo. Upload your photo file to the repo and put its name below.
+           Right now it points to a file named  abdul.jpg  -->
+      <figure class="about-photo">
+        <div class="photo-frame">
+          <img src="abdul.jpg" alt="Abdul El-Sayed (center) with supporters in Detroit">
+        </div>
+        <!-- EDIT: photo credit. This one is correct for the Wikimedia Commons photo.
+             If you use the campaign's own photo instead, change this to: Photo: Abdul for Senate -->
+        <figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Abdul_El-Sayed.jpg">Tamekia Ashford</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+      </figure>
     </div>
   </section>
 
@@ -265,7 +277,12 @@
           <h3>Medicare for All</h3>
           <p>Guaranteed, high-quality health care for every American.</p>
         </div>
+        <div class="card">
+          <span class="num">04</span>
+          <h3>Clean air &amp; water</h3>
+          <p>Protect the Great Lakes and hold polluters accountable.</p>
         </div>
+      </div>
     </div>
   </section>
 
