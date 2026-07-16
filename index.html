@@ -146,6 +146,31 @@
   .vote-grid h3{font-size:1.42rem;font-weight:800;margin-bottom:.35rem;}
   .tiny{font-size:.9rem;color:var(--muted);margin-top:.85rem;max-width:66ch;}
 
+  /* ── SEE-LINKS (inline videos / articles buttons) ───────── */
+  .see-links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.3rem;}
+  .see-links a{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;
+    font-weight:700;border-radius:999px;padding:.55rem 1.15rem;font-size:.95rem;color:#fff;
+    transition:background .12s ease,transform .12s ease;}
+  .see-links a:hover{transform:translateY(-1px);}
+  .see-links .v{background:var(--sun);}       /* Videos = red  */
+  .see-links .v:hover{background:var(--sun-deep);}
+  .see-links .a{background:var(--wave);}       /* Articles = blue */
+  .see-links .a:hover{background:var(--lake);}
+
+  /* ── VIDEOS & ARTICLES ──────────────────────────────────── */
+  .watch-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,3rem);margin-top:1.6rem;}
+  @media(max-width:700px){.watch-grid{grid-template-columns:1fr;}}
+  .watch-grid h3{font-size:1.3rem;font-weight:800;margin-bottom:.2rem;display:flex;align-items:center;gap:.55rem;}
+  .watch-grid h3 .dot{width:.7rem;height:.7rem;border-radius:50%;display:inline-block;flex:none;}
+  .linklist{list-style:none;padding:0;margin:.7rem 0 0;}
+  .linklist li{border-top:1px solid var(--line);}
+  .linklist li:last-child{border-bottom:1px solid var(--line);}
+  .linklist a{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    text-decoration:none;color:var(--ink);font-weight:600;padding:.75rem .1rem;transition:color .12s;}
+  .linklist a:hover{color:var(--sun);}
+  .linklist .src{font-size:.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;
+    letter-spacing:.05em;white-space:nowrap;}
+
   /* ── FOOTER ─────────────────────────────────────────────── */
   footer{background:var(--ink);color:#B9CDD1;padding:2.6rem 0;font-size:.92rem;}
   footer strong{color:#EAF4F5;}
@@ -169,10 +194,10 @@
     </span>
 
     <!-- EDIT: main headline -->
-    <h1>Make Washington work for Michigan.</h1>
+    <h1>Your primary vote counts for more.</h1>
 
     <!-- EDIT: one-line message under the headline -->
-    <p class="lede">Get money out of politics. Put money back in your pocket. Pass Medicare for All. That's what Abdul El-Sayed is running for.</p>
+    <p class="lede">Far fewer of us vote in the August primary than in November — so every vote cast here carries real weight in choosing who makes the fall ballot. Abdul El-Sayed, a doctor who's delivered for working Michiganders, is running people-powered, with no corporate PAC money. Make yours count by August 4.</p>
 
     <!-- EDIT: the two buttons — change the words and the links (href) -->
     <div class="cta-row">
@@ -239,6 +264,11 @@
         <p>Abdul El-Sayed is a Michigan-born physician and epidemiologist. He rebuilt Detroit's Health Department after the city's bankruptcy, then led Wayne County's health and human services for 1.8 million residents.</p>
         <p>In office, he secured free glasses for kids, removed lead from Detroit schools, expanded access to life-saving Narcan, and launched a program to cancel up to $700 million in medical debt for 300,000 Michiganders.</p>
         <p>Now he's running for the U.S. Senate on a campaign funded by people, not by corporate PACs, AIPAC, and its allies.</p>
+        <!-- EDIT: these two buttons jump to the Videos and Articles lists below -->
+        <p class="see-links">
+          <a class="v" href="#videos"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Videos</a>
+          <a class="a" href="#articles"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/></svg>Articles</a>
+        </p>
       </div>
       <!-- EDIT: photo. Upload your photo file to the repo and put its name below.
            Right now it points to a file named  abdul.jpg  -->
@@ -250,6 +280,42 @@
              If you use the campaign's own photo instead, change this to: Photo: Abdul for Senate -->
         <figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Abdul_El-Sayed.jpg">Tamekia Ashford</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
       </figure>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ VIDEOS & ARTICLES ══════════════════════ -->
+  <section id="watch-read" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <span class="eyebrow section-label">See for yourself</span>
+      <h2>Videos &amp; articles</h2>
+      <div class="watch-grid">
+
+        <div id="videos">
+          <h3><span class="dot" style="background:var(--sun)"></span>Videos</h3>
+          <!-- EDIT: add a video by copying a line. Keep the full link. -->
+          <ul class="linklist">
+            <li><a href="https://youtu.be/xFrdfG1kI5Y?si=opn9fLP0Oxv4g62b" target="_blank" rel="noopener">Abdul on Joy Reid's show</a></li>
+            <li><a href="https://youtu.be/vfwCaG4lGDI?si=pmPe8EbGN6w5VoLk" target="_blank" rel="noopener">AIPAC uses Obama to save Haley</a></li>
+            <li><a href="https://youtu.be/jn4BgP29fKQ?si=UaSvOhsyZjCw0AT2" target="_blank" rel="noopener">Abdul talks about Israel</a></li>
+            <li><a href="https://www.youtube.com/watch?v=l5RAWgMWeik" target="_blank" rel="noopener">Want to see something really nutty!</a></li>
+            <li><a href="https://youtu.be/2FofXOB5T2s?si=uIfJSiAivvu6AtSd" target="_blank" rel="noopener">CBS News interview (must-watch)</a></li>
+            <li><a href="https://youtu.be/t9Uiy1xUXsM?si=AJ86T5IiRRW6AyvA" target="_blank" rel="noopener">UAW endorses Abdul El-Sayed</a></li>
+            <li><a href="https://youtu.be/qMRMbqFDyv4?si=HoGVQ-LxFCoacPq7" target="_blank" rel="noopener">Voted already for Abdul (mail-in ballot)</a></li>
+          </ul>
+        </div>
+
+        <div id="articles">
+          <h3><span class="dot" style="background:var(--wave)"></span>Articles</h3>
+          <!-- EDIT: add an article by copying a line. Keep the full link. -->
+          <ul class="linklist">
+            <li><a href="https://wapo.st/4ffg9yF" target="_blank" rel="noopener">A surging liberal gives Democrats anxiety over Senate chances <span class="src">Washington Post</span></a></li>
+            <li><a href="https://www.wsj.com/politics/elections/battle-for-future-of-democratic-party-rages-in-key-senate-primary-c98e5e49?st=Qzve8Q&amp;reflink=desktopwebshare_permalink" target="_blank" rel="noopener">Battle for the future of the Democratic Party rages in a key Senate primary <span class="src">Wall Street Journal</span></a></li>
+            <li><a href="https://www.nytimes.com/2026/07/02/us/politics/ocasio-cortez-endorses-abdul-el-sayed-in-crucial-michigan-senate-race.html?unlocked_article_code=1.yFA._uzz.wueUzfXp5398&amp;smid=url-share" target="_blank" rel="noopener">Ocasio-Cortez endorses Abdul El-Sayed in crucial Michigan Senate race <span class="src">New York Times</span></a></li>
+            <li><a href="https://www.thenation.com/article/politics/abdul-el-sayed-michigan-senate-primary-haley-stevens-progressive-democrats-bernie-sanders/" target="_blank" rel="noopener">Could Abdul El-Sayed upend Democratic politics for good? <span class="src">The Nation</span></a></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </section>
 
